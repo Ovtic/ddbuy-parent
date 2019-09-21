@@ -1,0 +1,49 @@
+﻿父工程所用依赖：
+dubbo相关依赖、springMVC依赖、devtools热部署、springboot的test依赖
+
+项目所属组：com.team.ddbuy
+
+  工程结构：                   打包方式    工程类型          备注
+1.ddbuy-parent                 pom      springBoot      父工程
+
+2.ddbuy-common-interface       jar      maven           存放接口文件
+   引入依赖： mybatis分页插件--pagehelper
+            	    ddbuy-etity
+
+3.ddbuy-etity                  jar      maven           存放实体文件
+   实体需实现序列化
+
+4.ddbuy-mapper                 jar      maven           存放dao接口和mapper映射文件(持久化操作)
+   引入依赖： ddbuy-etity
+
+
+5.ddbuy-common-service         jar      springBoot      存放接口实现文件
+   引入依赖： ddbuy-common-interface
+            	    ddbuy-mapper
+	    mybatis-springboot-starter
+
+6.ddbuy-manage-web             jar      springBoot      后台管理工程
+   引入依赖： ddbuy-common-interface
+
+7.ddbuy-protal-web             jar      springBoot      前台门户工程
+   引入依赖： ddbuy-common-interface
+
+8.mybatis-reverse              无        maven           逆向生成所用工程
+
+注：5,6,7 三个工程都继承自父工程
+
+
+
+zookeeper注册中心端口号：2181
+
+服务提供者ddbuy-common-service：
+   服务id：ddbuy-common-service
+   服务名：ddbuy-common-service
+   tomcat：8081
+   提供的服务端口：20880
+
+服务消费者ddbuy-manage-web：
+   服务id：ddbuy-manager-web
+   服务名：ddbuy-manager-web
+   tomcat：9001
+
