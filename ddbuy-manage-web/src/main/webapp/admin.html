@@ -14,7 +14,8 @@
 						{"menuid":"1","icon":"icon-sys","menuname":"内容管理",
 							"menus":[
 									{"menuid":"12","menuname":"广告类型管理","icon":"icon-add","url":"TbContentCategory.jsp"},
-									{"menuid":"13","menuname":"广告管理","icon":"icon-users","url":"demo2.html"}
+									{"menuid":"13","menuname":"广告管理","icon":"icon-users","url":"demo2.html"},
+									{"menuid":"14","menuname":"广告添加","icon":"icon-users","url":"addContent.html"}
 								]
 						},{"menuid":"8","icon":"icon-sys","menuname":"商品管理",
 							"menus":[{"menuid":"21","menuname":"员工列表","icon":"icon-nav","url":"demo.html"},
@@ -75,7 +76,7 @@
             }
 
             $.post('/ajax/editpassword.ashx?newpass=' + $newpass.val(), function(msg) {
-                msgShow('系统提示', '恭喜，密码修改成功！<br>您的新密码为：' + msg, 'info');
+                msgShow('系统提示', '恭喜,密码修改成功！&lt;br&gt;您的新密码为：'+ msg, 'info');
                 $newpass.val('');
                 $rePass.val('');
                 close();

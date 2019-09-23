@@ -61,6 +61,13 @@
             <version>1.2</version>
         </dependency>
         <!-- 添加jsp支持 结束 -->
+
+        <!-- fastdfs-client -->
+        <dependency>
+            <groupId>cn.bestwu</groupId>
+            <artifactId>fastdfs-client-java</artifactId>
+            <version>1.27</version>
+        </dependency>
     </dependencies>
 
     <build>

@@ -29,6 +29,13 @@
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
         </dependency>
+
+        <!-- fastdfs-client -->
+        <dependency>
+            <groupId>cn.bestwu</groupId>
+            <artifactId>fastdfs-client-java</artifactId>
+            <version>1.27</version>
+        </dependency>
     </dependencies>
 
     <build>

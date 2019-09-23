@@ -1,4 +1,4 @@
-package com.ddbuy.ddbuytest;
+package com.ddbuy;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

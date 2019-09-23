@@ -1,4 +1,4 @@
-package com.team.ddbuy.ddbuycommonservice;
+package com.team.ddbuy;
 
 import com.github.pagehelper.PageInfo;
 import com.team.ddbuy.entity.TbContentCategory;
